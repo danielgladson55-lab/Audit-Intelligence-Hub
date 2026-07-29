@@ -1,0 +1,74 @@
+const frameworks = [
+  {
+    id: "ISO27001",
+    name: "ISO 27001:2022",
+    category: "Information Security"
+  },
+  {
+    id: "ISO27002",
+    name: "ISO 27002",
+    category: "Security Controls"
+  },
+  {
+    id: "NISTCSF",
+    name: "NIST CSF 2.0",
+    category: "Cybersecurity"
+  },
+  {
+    id: "NIST80053",
+    name: "NIST SP 800-53",
+    category: "Security Controls"
+  },
+  {
+    id: "COBIT",
+    name: "COBIT 2019",
+    category: "IT Governance"
+  },
+  {
+    id: "CIS",
+    name: "CIS Controls v8",
+    category: "Cybersecurity"
+  },
+  {
+    id: "SOC1",
+    name: "SOC 1",
+    category: "Assurance"
+  },
+  {
+    id: "SOC2",
+    name: "SOC 2",
+    category: "Assurance"
+  },
+  {
+    id: "PCI",
+    name: "PCI DSS 4.0",
+    category: "Compliance"
+  },
+  {
+    id: "HIPAA",
+    name: "HIPAA",
+    category: "Healthcare"
+  },
+  {
+    id: "GDPR",
+    name: "GDPR",
+    category: "Privacy"
+  },
+  {
+    id: "PDPL",
+    name: "UAE PDPL",
+    category: "Privacy"
+  },
+  {
+    id: "DORA",
+    name: "DORA",
+    category: "Operational Resilience"
+  },
+  {
+    id: "ISO42001",
+    name: "ISO 42001",
+    category: "AI Governance"
+  }
+];
+
+export default frameworks;
