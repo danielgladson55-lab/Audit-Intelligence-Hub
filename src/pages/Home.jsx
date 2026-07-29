@@ -4,50 +4,51 @@ import risks from "../data/risks";
 
 export default function Home() {
   return (
-    <div>
+    <div className="space-y-8">
 
-      <div className="mb-10">
+      <section>
         <h1 className="text-5xl font-bold">
           Audit Intelligence Hub
         </h1>
 
-        <p className="text-lg mt-3">
-          Unified IT Audit, Cybersecurity,
-          GRC and Compliance Platform
+        <p className="text-gray-600 mt-2 text-lg">
+          Unified Audit, Risk, Compliance,
+          Security and Governance Platform
         </p>
-      </div>
+      </section>
 
-      <div className="grid md:grid-cols-4 gap-4">
+      <section className="grid md:grid-cols-4 gap-4">
 
-        <div className="p-6 bg-white rounded-xl shadow">
+        <div className="bg-white p-6 rounded-xl shadow">
           <h3>Frameworks</h3>
-          <p className="text-3xl">
+          <p className="text-3xl font-bold">
             {frameworks.length}
           </p>
         </div>
 
-        <div className="p-6 bg-white rounded-xl shadow">
+        <div className="bg-white p-6 rounded-xl shadow">
           <h3>Controls</h3>
-          <p className="text-3xl">
+          <p className="text-3xl font-bold">
             {controls.length}
           </p>
         </div>
 
-        <div className="p-6 bg-white rounded-xl shadow">
+        <div className="bg-white p-6 rounded-xl shadow">
           <h3>Risks</h3>
-          <p className="text-3xl">
+          <p className="text-3xl font-bold">
             {risks.length}
           </p>
         </div>
 
-        <div className="p-6 bg-white rounded-xl shadow">
+        <div className="bg-white p-6 rounded-xl shadow">
           <h3>Audit Programs</h3>
-          <p className="text-3xl">
-            0
+          <p className="text-3xl font-bold">
+            3
           </p>
         </div>
 
-      </div>
+      </section>
+
     </div>
   );
 }
