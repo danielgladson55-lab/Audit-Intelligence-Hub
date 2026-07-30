@@ -1,0 +1,42 @@
+const coreCatalog = {
+  frameworks: [
+    { id: "ISO27001", name: "ISO/IEC 27001:2022", category: "Information Security", status: "Active" },
+    { id: "NISTCSF", name: "NIST Cybersecurity Framework 2.0", category: "Cybersecurity", status: "Active" },
+    { id: "NIST80053", name: "NIST SP 800-53", category: "Security Controls", status: "Active" },
+    { id: "COBIT2019", name: "COBIT 2019", category: "IT Governance", status: "Active" },
+    { id: "CISV8", name: "CIS Controls v8", category: "Cybersecurity", status: "Active" },
+    { id: "SOC2", name: "SOC 2 Trust Services Criteria", category: "Assurance", status: "Active" },
+    { id: "PCIDSS", name: "PCI DSS 4.x", category: "Payment Security", status: "Active" },
+    { id: "ISO42001", name: "ISO/IEC 42001", category: "AI Governance", status: "Active" },
+  ],
+  modules: [
+    { id: "dashboard", name: "Executive Dashboard", path: "/", group: "Overview", keywords: ["metrics", "findings", "audit"] },
+    { id: "frameworks", name: "Framework Repository", path: "/frameworks", group: "Knowledge", keywords: ["iso", "nist", "cobit", "cis"] },
+    { id: "controls", name: "Unified Control Library", path: "/controls", group: "Knowledge", keywords: ["control", "procedure", "evidence"] },
+    { id: "risks", name: "Risk Library", path: "/risks", group: "Knowledge", keywords: ["risk", "impact", "likelihood"] },
+    { id: "crosswalk", name: "Control Crosswalk", path: "/crosswalk", group: "Intelligence", keywords: ["mapping", "framework", "coverage"] },
+    { id: "audit-builder", name: "Audit Checklist Generator", path: "/audit-builder", group: "Audit Delivery", keywords: ["scope", "checklist", "generator"] },
+    { id: "audit-workspace", name: "Audit Workspace", path: "/audit-workspace", group: "Audit Delivery", keywords: ["testing", "findings", "workpaper"] },
+    { id: "evidence", name: "Evidence Library", path: "/evidence-tracker", group: "Audit Delivery", keywords: ["pbc", "request", "evidence"] },
+    { id: "policies", name: "Policy Repository", path: "/policies", group: "Knowledge", keywords: ["policy", "standard", "procedure"] },
+    { id: "compliance", name: "Compliance Mapper", path: "/compliance-hub", group: "Intelligence", keywords: ["gap", "assessment", "compliance"] },
+    { id: "technology", name: "Technology Audit Packs", path: "/technology-audits", group: "Audit Packs", keywords: ["azure", "m365", "aws", "github", "sap"] },
+    { id: "tprm", name: "Vendor Risk Assessment", path: "/tprm-assessment", group: "Audit Packs", keywords: ["vendor", "third party", "tprm"] },
+{
+  id: "knowledge-graph",
+  name: "Knowledge Graph Explorer",
+  path: "/knowledge-graph",
+  group: "Intelligence",
+
+  keywords: [
+    "control",
+    "risk",
+    "procedure",
+    "evidence",
+    "mapping",
+  ],
+},  
+  ],
+};
+
+export default coreCatalog;

@@ -1,29 +1,34 @@
+import { useState } from "react";
+
 import crosswalks from "../data/crosswalks";
+import SearchBar from "../components/SearchBar";
+import CrosswalkCard from "../components/CrosswalkCard";
 
 export default function Crosswalk() {
+  const [searchTerm, setSearchTerm] =
+    useState("");
+
+  const filteredCrosswalks =
+    crosswalks.filter((item) =>
+      item.keyword
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase())
+    );
+
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-5">
-        Framework Crosswalk
-      </h2>
+      <h1>Framework Crosswalk Engine</h1>
 
-      {crosswalks.map(item => (
-        <div
-          key={item.keyword}
-          className="border p-4 rounded-xl mb-3"
-        >
-          <h3 className="font-bold">
-            {item.keyword}
-          </h3>
+      <SearchBar
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+      />
 
-          <pre>
-            {JSON.stringify(
-              item.mappings,
-              null,
-              2
-            )}
-          </pre>
-        </div>
+      {filteredCrosswalks.map((item) => (
+        <CrosswalkCard
+          key={item.id}
+          item={item}
+        />
       ))}
     </div>
   );

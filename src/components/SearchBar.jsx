@@ -1,16 +1,23 @@
 export default function SearchBar({
-  value,
-  onChange
+  searchTerm,
+  setSearchTerm,
 }) {
   return (
     <input
-      className="w-full border rounded-lg p-3"
+      type="text"
       placeholder="Search controls, risks, frameworks..."
-      value={value}
+      value={searchTerm}
       onChange={(e) =>
-        onChange(e.target.value)
+        setSearchTerm(e.target.value)
       }
+      style={{
+        width: "100%",
+        padding: "12px",
+        borderRadius: "8px",
+        border: "1px solid #ccc",
+        marginBottom: "20px",
+        fontSize: "16px"
+      }}
     />
   );
 }
-``

@@ -1,0 +1,168 @@
+const controlLibrary = [
+  {
+    controlId: "IAM-001",
+    controlName: "Privileged Access Management",
+    domain: "Identity and Access Management",
+    risk:
+      "Privileged access may be granted without appropriate authorization or oversight.",
+    riskIds: ["RISK-001"],
+    frameworkMappings: {
+      iso27001: ["5.15", "8.2"],
+      nist80053: ["AC-2", "AC-6"],
+      cobit: ["DSS05"],
+      cis: ["5", "6"],
+      soc2: ["CC6"],
+      pciDss: ["7", "8"],
+    },
+    auditProcedures: [
+      "Obtain the current privileged account listing",
+      "Verify documented business justification and approval",
+      "Review periodic privileged-access recertification",
+      "Inspect monitoring of privileged activity",
+    ],
+    evidence: [
+      "Privileged account listing",
+      "Access approval records",
+      "Role and privilege matrix",
+      "Periodic access review evidence",
+      "Privileged activity logs",
+    ],
+    policies: [
+      "Access Management Policy",
+      "Privileged Access Management Standard",
+    ],
+    relatedAudits: [
+      "ITGC",
+      "SOX",
+      "SOC2",
+      "PCI",
+      "AZURE",
+      "M365",
+    ],
+  },
+  {
+    controlId: "IAM-002",
+    controlName: "Multi-Factor Authentication",
+    domain: "Identity and Access Management",
+    risk:
+      "Compromised credentials may allow unauthorized access to systems and information.",
+    riskIds: ["RISK-001", "RISK-003"],
+    frameworkMappings: {
+      iso27001: ["5.17"],
+      nist80053: ["IA-2"],
+      cobit: ["DSS05"],
+      cis: ["6"],
+      soc2: ["CC6"],
+      pciDss: ["8"],
+    },
+    auditProcedures: [
+      "Inspect multi-factor authentication configuration",
+      "Confirm coverage of privileged and remote access",
+      "Review approved exceptions",
+      "Test authentication enforcement for a sample of users",
+    ],
+    evidence: [
+      "Authentication configuration",
+      "Conditional access policies",
+      "Multi-factor authentication registration report",
+      "Exception register",
+      "Sample test results",
+    ],
+    policies: [
+      "Access Management Policy",
+      "Authentication Standard",
+    ],
+    relatedAudits: [
+      "ITGC",
+      "SOX",
+      "SOC2",
+      "PCI",
+      "AZURE",
+      "M365",
+    ],
+  },
+  {
+    controlId: "CHG-001",
+    controlName: "Formal Change Management",
+    domain: "Change Management",
+    risk:
+      "Unauthorized or inadequately tested changes may disrupt services or compromise processing integrity.",
+    riskIds: ["RISK-002"],
+    frameworkMappings: {
+      iso27001: ["8.32"],
+      nist80053: ["CM-3"],
+      cobit: ["BAI06"],
+      cis: ["4"],
+      soc2: ["CC8"],
+      pciDss: ["6"],
+    },
+    auditProcedures: [
+      "Select a sample of production changes",
+      "Verify authorization before implementation",
+      "Inspect testing and business acceptance",
+      "Confirm segregation between development and deployment",
+      "Review emergency change handling",
+    ],
+    evidence: [
+      "Change population",
+      "Change tickets",
+      "Approval records",
+      "Testing evidence",
+      "Deployment evidence",
+      "Emergency change review",
+    ],
+    policies: [
+      "Change Management Policy",
+      "Secure Development Standard",
+    ],
+    relatedAudits: [
+      "ITGC",
+      "SOX",
+      "SOC2",
+      "PCI",
+      "AZURE",
+      "GITHUB",
+    ],
+  },
+  {
+    controlId: "BKP-001",
+    controlName: "Backup and Restoration",
+    domain: "Technology Resilience",
+    risk:
+      "Critical data may not be recoverable following deletion, corruption or service disruption.",
+    riskIds: ["RISK-004"],
+    frameworkMappings: {
+      iso27001: ["8.13"],
+      nist80053: ["CP-9", "CP-10"],
+      cobit: ["DSS04"],
+      cis: ["11"],
+      soc2: ["A1"],
+      pciDss: ["12"],
+    },
+    auditProcedures: [
+      "Review backup schedules and success reports",
+      "Verify backup failures are investigated",
+      "Inspect restoration testing",
+      "Review retention and protection arrangements",
+    ],
+    evidence: [
+      "Backup configuration",
+      "Backup success and failure reports",
+      "Restoration test evidence",
+      "Retention schedule",
+      "Backup exception records",
+    ],
+    policies: [
+      "Backup and Restoration Policy",
+      "Business Continuity Policy",
+    ],
+    relatedAudits: [
+      "ITGC",
+      "SOC2",
+      "AZURE",
+      "M365",
+    ],
+  },
+];
+
+export default controlLibrary;

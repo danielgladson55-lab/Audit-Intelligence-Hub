@@ -1,68 +1,65 @@
-const controls = [
-  {
-    controlId: "IAM-001",
-    controlName: "Privileged Access Management",
-    domain: "Identity & Access Management",
+const controls = [{
+  id: "IAM-001",
 
-    mappings: {
-      iso27001: ["5.15"],
-      nist80053: ["AC-2"],
-      cobit: ["DSS05"],
-      cis: ["5"]
-    },
+  title: "Privileged Access Management",
 
-    {
-  controlId: "IAM-002",
-  controlName: "Multi Factor Authentication",
   domain: "Identity & Access Management",
 
-  mappings: {
-    iso27001: ["5.17"],
-    nist80053: ["IA-2"],
+  risk: "Unauthorized privileged access",
+
+  frameworks: {
+    iso27001: ["5.15"],
+    nist80053: ["AC-2"],
     cobit: ["DSS05"],
-    cis: ["6"]
+    cis: ["5"],
+    soc2: ["CC6"],
+    pci: ["7"]
   },
 
-  risk: "User account compromise"
-},
+  auditProcedures: [
+    "Review privileged access list",
+    "Verify approvals",
+    "Review periodic recertification"
+  ],
 
-{
-  controlId: "CHG-001",
-  controlName: "Formal Change Management",
+  evidence: [
+    "User access report",
+    "Approval records",
+    "Role matrix"
+  ]
+}, 
 
-  domain: "Change Management",
-
-  mappings: {
-    iso27001: ["8.32"],
-    nist80053: ["CM-3"],
-    cobit: ["BAI06"],
-    cis: ["4"]
+  {
+    id: "IAM-002",
+    title: "Multi Factor Authentication",
+    frameworks: [
+      "ISO27001",
+      "PCI DSS",
+      "SOC2"
+    ],
+    risk: "Account compromise"
   },
 
-  risk: "Unauthorized system changes"
-},
-
-{
-  controlId: "BKP-001",
-
-  controlName: "Backup and Restoration",
-
-  domain: "Backup & Recovery",
-
-  mappings: {
-    iso27001: ["8.13"],
-    nist80053: ["CP-9"],
-    cobit: ["DSS04"],
-    cis: ["11"]
+  {
+    id: "CHG-001",
+    title: "Change Management",
+    frameworks: [
+      "COBIT",
+      "SOX",
+      "ITGC"
+    ],
+    risk: "Unauthorized system changes"
   },
 
-  risk: "Data loss"
-}
-
-    risk:
-      "Unauthorized privileged access may lead to data breach or fraud"
+  {
+    id: "BKP-001",
+    title: "Backup and Recovery",
+    frameworks: [
+      "ISO27001",
+      "NIST"
+    ],
+    risk: "Data loss"
   }
 ];
 
 export default controls;
-

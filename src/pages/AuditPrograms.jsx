@@ -1,40 +1,27 @@
-const auditPrograms = [
-  {
-    id: "AZURE-AUDIT",
+import auditPrograms
+from "../data/auditPrograms";
 
-    title: "Azure Security Review",
+import AuditProgramCard
+from "../components/AuditProgramCard";
 
-    domains: [
-      "IAM",
-      "Logging",
-      "Backup",
-      "Encryption"
-    ]
-  },
+export default function AuditPrograms() {
 
-  {
-    id: "M365-AUDIT",
+  return (
+    <div>
 
-    title: "Microsoft 365 Security Audit",
+      <h1>
+        Audit Program Library
+      </h1>
 
-    domains: [
-      "Entra ID",
-      "Conditional Access",
-      "MFA"
-    ]
-  },
+      {auditPrograms.map(audit => (
 
-  {
-    id: "GITHUB-AUDIT",
+        <AuditProgramCard
+          key={audit.id}
+          audit={audit}
+        />
 
-    title: "GitHub Security Review",
+      ))}
 
-    domains: [
-      "Branch Protection",
-      "Secret Scanning",
-      "Dependabot"
-    ]
-  }
-];
-
-export default auditPrograms;
+    </div>
+  );
+}

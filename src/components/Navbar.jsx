@@ -2,33 +2,57 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="bg-slate-900 text-white p-4">
+    <nav
+      style={{
+        background: "#0f172a",
+        padding: "15px",
+        display: "flex",
+        gap: "20px"
+      }}
+    >
+      <Link to="/" style={{ color: "white" }}>
+        Dashboard
+      </Link>
 
-      <div className="
-        max-w-7xl
-        mx-auto
-        flex
-        gap-6
-      ">
+      <Link to="/frameworks" style={{ color: "white" }}>
+        Frameworks
+      </Link>
 
-        <Link to="/">
-          Dashboard
-        </Link>
+      <Link to="/controls" style={{ color: "white" }}>
+        Controls
+      </Link>
 
-        <Link to="/frameworks">
-          Frameworks
-        </Link>
+      <Link to="/risks" style={{ color: "white" }}>
+        Risks
+      </Link>
+      <Link   to="/risk-explorer"   style={{ color: "white" }} >
+       Risk Explorer
+      </Link>
+      <Link   to="/audit-workspace"   style={{ color: "white" }} >
+  Audit Workspace
+</Link>
+      <Link   to="/policies"   style={{ color: "white" }} >
+  Policies
+</Link>
+      <Link to="/crosswalk" style={{ color: "white" }}>
+        Crosswalk
+      </Link>
 
-        <Link to="/controls">
-          Controls
-        </Link>
-
-        <Link to="/crosswalk">
-          Crosswalk
-        </Link>
-
-      </div>
-
+      <Link to="/audit-builder" style={{ color: "white" }}>
+        Audit Builder
+</Link>
+<Link
+  to="/tprm-assessment"
+  style={{ color: "white" }}
+>
+  TPRM Assessment
+</Link>
+<Link
+  to="/evidence-tracker"
+  style={{ color: "white" }}
+>
+  Evidence Tracker
+</Link>
     </nav>
   );
 }

@@ -1,21 +1,46 @@
-import controls from "../data/controls";
+import { useState } from "react";
+
+import SearchBar from "../components/SearchBar";
 import ControlCard from "../components/ControlCard";
 
+import controlLibrary
+from "../data/controlLibrary";
+
+import { searchControls }
+from "../services/searchService";
+
 export default function Controls() {
+
+  const [searchTerm, setSearchTerm] =
+    useState("");
+
+  const filteredControls =
+    searchControls(
+      controlLibrary,
+      searchTerm
+    );
+
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-5">
-        Control Repository
-      </h2>
 
-      <div className="grid gap-4">
-        {controls.map(control => (
-          <ControlCard
-            key={control.controlId}
-            control={control}
-          />
-        ))}
-      </div>
+      <h1>
+        Universal Control Library
+      </h1>
+
+      <SearchBar
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+      />
+
+      {filteredControls.map(control => (
+
+        <ControlCard
+          key={control.controlId}
+          control={control}
+        />
+
+      ))}
+
     </div>
   );
 }
