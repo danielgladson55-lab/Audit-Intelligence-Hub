@@ -1,0 +1,8 @@
+.library-layout { display: grid; grid-template-columns: 310px minmax(0, 1fr); gap: 18px; align-items: start; }
+.library-list { display: grid; gap: 8px; position: sticky; top: 86px; max-height: calc(100vh - 110px); overflow: auto; }
+.library-list button { display: grid; gap: 4px; width: 100%; padding: 13px; text-align: left; color: #172033; background: #fff; border: 1px solid #dce4ef; }
+.library-list button:hover, .library-list button.selected { color: #173f7a; background: #edf3ff; border-color: #2f6fed; }
+.library-list span { color: #2f6fed; font-size: 11px; font-weight: 800; }
+.library-list small { color: #64748b; }
+.library-editor { min-width: 0; }
+@media (max-width: 900px) { .library-layout { grid-template-columns: 1fr; } .library-list { position: static; max-height: none; } }

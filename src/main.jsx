@@ -6,6 +6,11 @@ import "./index.css";
 import "./App.css";
 import "./core-shell.css";
 import "./knowledge-graph.css";
+import "./checklist-generator.css";
+import "./compliance-mapper.css";
+import "./maturity-assessment.css";
+import "./policy-workpaper.css";
+import "./cloud-audit-packs.css";
 
 ReactDOM.createRoot(
   document.getElementById("root")

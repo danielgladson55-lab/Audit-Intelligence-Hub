@@ -1,0 +1,27 @@
+.compliance-progress {
+  margin: 18px 0 24px;
+  padding: 18px;
+  border: 1px solid #dce4ef;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.compliance-progress > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.compliance-track {
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #dce4ef;
+}
+
+.compliance-value {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2f6fed, #16a36a);
+  transition: width 0.2s ease;
+}

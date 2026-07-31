@@ -16,11 +16,54 @@ const coreCatalog = {
     { id: "risks", name: "Risk Library", path: "/risks", group: "Knowledge", keywords: ["risk", "impact", "likelihood"] },
     { id: "crosswalk", name: "Control Crosswalk", path: "/crosswalk", group: "Intelligence", keywords: ["mapping", "framework", "coverage"] },
     { id: "audit-builder", name: "Audit Checklist Generator", path: "/audit-builder", group: "Audit Delivery", keywords: ["scope", "checklist", "generator"] },
+   {
+  id: "audit-builder",
+  name: "Audit Checklist Generator",
+  path: "/audit-builder",
+  group: "Audit Delivery",
+  keywords: [
+    "scope",
+    "checklist",
+    "generator",
+    "audit programme",
+  ],
+},
     { id: "audit-workspace", name: "Audit Workspace", path: "/audit-workspace", group: "Audit Delivery", keywords: ["testing", "findings", "workpaper"] },
     { id: "evidence", name: "Evidence Library", path: "/evidence-tracker", group: "Audit Delivery", keywords: ["pbc", "request", "evidence"] },
-    { id: "policies", name: "Policy Repository", path: "/policies", group: "Knowledge", keywords: ["policy", "standard", "procedure"] },
+    {
+  id: "policies",
+  name: "Policy and Workpaper Engine",
+  path: "/policies",
+  group: "Knowledge",
+  keywords: [
+    "policy",
+    "standard",
+    "procedure",
+    "workpaper",
+    "template",
+    "audit report",
+    "management action plan",
+  ],
+},
     { id: "compliance", name: "Compliance Mapper", path: "/compliance-hub", group: "Intelligence", keywords: ["gap", "assessment", "compliance"] },
-    { id: "technology", name: "Technology Audit Packs", path: "/technology-audits", group: "Audit Packs", keywords: ["azure", "m365", "aws", "github", "sap"] },
+    {
+  id: "technology",
+  name: "Cloud and Developer Audit Packs",
+  path: "/technology-audits",
+  group: "Audit Packs",
+
+  keywords: [
+    "microsoft 365",
+    "azure",
+    "aws",
+    "github",
+    "cloud",
+    "developer",
+    "entra",
+    "key vault",
+    "branch protection",
+  ],
+},
     { id: "tprm", name: "Vendor Risk Assessment", path: "/tprm-assessment", group: "Audit Packs", keywords: ["vendor", "third party", "tprm"] },
 {
   id: "knowledge-graph",
@@ -36,6 +79,20 @@ const coreCatalog = {
     "mapping",
   ],
 },  
+{
+  id: "maturity-assessment",
+  name: "Maturity Assessment Tool",
+  path: "/maturity-assessment",
+  group: "Intelligence",
+
+  keywords: [
+    "maturity",
+    "capability",
+    "gap",
+    "target",
+    "heat map",
+  ],
+},
   ],
 };
 

@@ -5,14 +5,19 @@ import Frameworks from "../pages/Frameworks";
 import Controls from "../pages/Controls";
 import Risks from "../pages/Risks";
 import Crosswalk from "../pages/Crosswalk";
-import AuditBuilder from "../pages/AuditBuilder";
+// import AuditBuilder from "../pages/AuditBuilder";
+import DynamicChecklistGenerator from "../pages/DynamicChecklistGenerator";
 import AuditWorkspace from "../pages/AuditWorkspace";
-import Policies from "../pages/Policies";
-import ComplianceHub from "../pages/ComplianceHub";
-import TechnologyAudits from "../pages/TechnologyAudits";
+//import Policies from "../pages/Policies";
+//import ComplianceHub from "../pages/ComplianceHub";
+import ComplianceMapper  from "../pages/ComplianceMapper";
+//import TechnologyAudits from "../pages/TechnologyAudits";
 import TPRMAssessment from "../pages/TPRMAssessment";
 import EvidenceTracker from "../pages/EvidenceTracker";
 import KnowledgeGraphExplorer from "../pages/KnowledgeGraphExplorer";
+import MaturityAssessment  from "../pages/MaturityAssessment";
+import PolicyWorkpaperEngine  from "../pages/PolicyWorkpaperEngine";
+import CloudDeveloperAuditPacks  from "../pages/CloudDeveloperAuditPacks";
 
 export default function AppRoutes() {
   return (
@@ -23,14 +28,29 @@ export default function AppRoutes() {
         <Route path="/controls" element={<Controls />} />
         <Route path="/risks" element={<Risks />} />
         <Route path="/crosswalk" element={<Crosswalk />} />
-        <Route path="/audit-builder" element={<AuditBuilder />} />
+        <Route path="/audit-builder" element={<DynamicChecklistGenerator />} />
         <Route path="/audit-workspace" element={<AuditWorkspace />} />
-        <Route path="/policies" element={<Policies />} />
-        <Route path="/compliance-hub" element={<ComplianceHub />} />
-        <Route path="/technology-audits" element={<TechnologyAudits />} />
+       <Route
+  path="/policies"
+  element={<PolicyWorkpaperEngine />}
+/>
+       <Route
+  path="/compliance-hub"
+  element={<ComplianceMapper />}
+/>
+
+     <Route
+  path="/technology-audits"
+  element={<CloudDeveloperAuditPacks />}
+/>
         <Route path="/tprm-assessment" element={<TPRMAssessment />} />
         <Route path="/evidence-tracker" element={<EvidenceTracker />} />
         <Route path="/knowledge-graph" element={<KnowledgeGraphExplorer />} />
+        <Route element={<AppShell />}>
+  {/* Child routes */}
+   <Route path="/maturity-assessment" element={<MaturityAssessment />} />
+</Route>
+       
       </Route>
     </Routes>
   );

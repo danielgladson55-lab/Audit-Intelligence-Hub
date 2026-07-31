@@ -1,0 +1,12 @@
+.pack-hero { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin: 20px 0; padding: 22px; border-radius: 16px; color: #fff; background: linear-gradient(135deg, #10254b, #245fc9); }
+.pack-hero h2, .pack-hero p, .pack-hero span, .pack-hero strong { color: #fff; }
+.pack-hero span { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.pack-hero strong { font-size: 28px; white-space: nowrap; }
+.pack-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.pack-tags span { padding: 5px 9px; border-radius: 999px; color: #1c4f9d; background: #edf3ff; font-size: 12px; font-weight: 800; }
+.pack-rating { display: inline-block; padding: 6px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+.pack-critical { color: #fff; background: #7f1d1d; }
+.pack-high { color: #991b1b; background: #fee2e2; }
+.pack-medium { color: #92400e; background: #fef3c7; }
+.pack-low { color: #166534; background: #dcfce7; }
+@media (max-width: 760px) { .pack-hero { align-items: flex-start; flex-direction: column; } }
