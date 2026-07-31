@@ -80,6 +80,25 @@ const coreCatalog = {
   ],
 },  
 {
+  id: "enterprise-audits",
+  name: "Enterprise Application Audit Packs",
+  path: "/enterprise-audits",
+  group: "Audit Packs",
+
+  keywords: [
+    "sap",
+    "servicenow",
+    "oracle",
+    "salesforce",
+    "workday",
+    "database",
+    "itac",
+    "segregation of duties",
+    "automated controls",
+    "interfaces",
+  ],
+},
+{
   id: "maturity-assessment",
   name: "Maturity Assessment Tool",
   path: "/maturity-assessment",

@@ -91,6 +91,11 @@ const navigation = [
   path: "/technology-audits",
   icon: "⌘",
 },
+    {
+  label: "Enterprise Application Packs",
+  path: "/enterprise-audits",
+  icon: "▣",
+},
       {
         label: "Vendor Risk",
         path: "/tprm-assessment",

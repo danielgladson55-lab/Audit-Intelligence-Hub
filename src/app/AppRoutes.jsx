@@ -18,6 +18,7 @@ import KnowledgeGraphExplorer from "../pages/KnowledgeGraphExplorer";
 import MaturityAssessment  from "../pages/MaturityAssessment";
 import PolicyWorkpaperEngine  from "../pages/PolicyWorkpaperEngine";
 import CloudDeveloperAuditPacks  from "../pages/CloudDeveloperAuditPacks";
+import EnterpriseApplicationAuditPacks  from "../pages/EnterpriseApplicationAuditPacks";
 
 export default function AppRoutes() {
   return (
@@ -42,6 +43,10 @@ export default function AppRoutes() {
      <Route
   path="/technology-audits"
   element={<CloudDeveloperAuditPacks />}
+/>
+<Route
+  path="/enterprise-audits"
+  element={<EnterpriseApplicationAuditPacks />}
 />
         <Route path="/tprm-assessment" element={<TPRMAssessment />} />
         <Route path="/evidence-tracker" element={<EvidenceTracker />} />
