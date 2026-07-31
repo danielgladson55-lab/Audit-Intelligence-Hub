@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import coreCatalog from "../../data/coreCatalog";
 import controlLibrary from "../../data/controlLibrary";
 import riskLibrary from "../../data/riskLibrary";

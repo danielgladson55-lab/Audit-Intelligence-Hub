@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { getExecutiveIntelligence } from "../services/executiveIntelligenceService";
 
 export default function ExecutiveIntelligenceDashboard() {

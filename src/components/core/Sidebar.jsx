@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 import navigation from "../../app/navigation";
 
 export default function Sidebar({ open, onClose }) {

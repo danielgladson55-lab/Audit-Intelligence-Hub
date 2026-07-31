@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+//import { Routes, Route } from "react-router";
+import { Route, Routes,} from "react-router";
 import AppShell from "../components/core/AppShell";
 import CoreDashboard from "../pages/CoreDashboard";
 import Frameworks from "../pages/Frameworks";
@@ -28,6 +29,7 @@ import NotFound from "../pages/NotFound";
 export default function AppRoutes() {
   return (
     <Routes>
+
       <Route element={<AppShell />}>
         <Route path="/" element={<CoreDashboard />} />
         <Route path="/frameworks" element={<Frameworks />} />
@@ -81,7 +83,7 @@ export default function AppRoutes() {
     path="/about"
     element={<AboutPlatform />}
   />
-  
+
 </Route>
       </Route>
       <Route

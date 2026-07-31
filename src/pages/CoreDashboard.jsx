@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { getCoreMetrics } from "../services/coreMetricsService";
 
 export default function CoreDashboard() {
