@@ -1,0 +1,8 @@
+.ai-profile { border-top: 4px solid #7057d9; }
+.ai-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.ai-tags span { padding: 6px 9px; border-radius: 999px; color: #4c2f8f; background: #f0eaff; font-size: 12px; font-weight: 800; }
+.ai-rating { display: inline-block; padding: 6px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+.ai-critical { color: #fff; background: #7f1d1d; }
+.ai-high { color: #991b1b; background: #fee2e2; }
+.ai-medium { color: #92400e; background: #fef3c7; }
+.ai-low { color: #166534; background: #dcfce7; }

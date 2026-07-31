@@ -80,6 +80,39 @@ const coreCatalog = {
   ],
 },  
 {
+  id: "knowledge-centers",
+  name: "CISA and CISSP Knowledge Centers",
+  path: "/knowledge-centers",
+  group: "Learning",
+
+  keywords: [
+    "cisa",
+    "cissp",
+    "certification",
+    "learning",
+    "study",
+    "audit",
+    "security",
+  ],
+},
+{
+  id: "executive-intelligence",
+  name: "Executive Intelligence Dashboard",
+  path: "/executive-intelligence",
+  group: "Overview",
+
+  keywords: [
+    "dashboard",
+    "findings",
+    "compliance",
+    "maturity",
+    "evidence",
+    "executive",
+    "management",
+    "risk",
+  ],
+},
+{
   id: "enterprise-audits",
   name: "Enterprise Application Audit Packs",
   path: "/enterprise-audits",
@@ -96,6 +129,24 @@ const coreCatalog = {
     "segregation of duties",
     "automated controls",
     "interfaces",
+  ],
+},
+{
+  id: "ai-governance",
+  name: "AI Governance Hub",
+  path: "/ai-governance",
+  group: "Audit Packs",
+
+  keywords: [
+    "ai",
+    "iso 42001",
+    "nist ai rmf",
+    "copilot",
+    "generative ai",
+    "model",
+    "prompt",
+    "agent",
+    "connector",
   ],
 },
 {

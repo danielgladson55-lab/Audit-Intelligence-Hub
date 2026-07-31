@@ -1,0 +1,15 @@
+.knowledge-source-link { align-self: flex-start; }
+.learning-progress { margin: 18px 0; padding: 17px; border: 1px solid #dce4ef; border-radius: 13px; background: #fff; }
+.learning-progress > div:first-child { display: flex; justify-content: space-between; margin-bottom: 9px; }
+.learning-progress > div:last-child { height: 11px; overflow: hidden; border-radius: 999px; background: #dce4ef; }
+.learning-progress > div:last-child > div { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #2f6fed, #16a36a); }
+.completion-check { display: flex; align-items: center; gap: 8px; margin: 0; }
+.completion-check input { width: auto; margin: 0; }
+.executive-hero { background: linear-gradient(135deg, #10254b, #4f46a5); }
+.bar-list { display: grid; gap: 13px; }
+.bar-list > div { display: grid; grid-template-columns: 70px 1fr 30px; align-items: center; gap: 10px; }
+.bar-list > div > div { height: 10px; overflow: hidden; border-radius: 999px; background: #e2e8f0; }
+.bar-list i { display: block; height: 100%; border-radius: 999px; background: #e45858; }
+.insight-list { display: grid; gap: 9px; }
+.insight-list > div { display: flex; justify-content: space-between; gap: 12px; padding: 11px; border: 1px solid #e2e8f0; border-radius: 9px; background: #f8fafc; }
+.insight-list strong { color: #1c4f9d; }

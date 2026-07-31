@@ -12,6 +12,8 @@ import "./maturity-assessment.css";
 import "./policy-workpaper.css";
 import "./cloud-audit-packs.css";
 import "./enterprise-audit-packs.css";
+import "./ai-governance.css";
+import "./stage19.css";
 
 ReactDOM.createRoot(
   document.getElementById("root")

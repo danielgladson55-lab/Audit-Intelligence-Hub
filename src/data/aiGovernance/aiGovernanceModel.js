@@ -1,0 +1,158 @@
+const aiGovernanceDomains = [
+  {
+    id: "AI-GOV-001",
+    name: "Governance and Accountability",
+    risk: "Unclear accountability may allow AI systems to be developed or used without appropriate oversight, approval or risk ownership.",
+    controls: [
+      "Maintain approved AI governance roles and decision rights.",
+      "Establish AI policy, risk appetite and escalation criteria.",
+      "Require risk-based approval before production use.",
+      "Report material AI risks and incidents to accountable governance bodies.",
+    ],
+    evidence: ["AI governance charter", "AI policy", "Risk appetite", "Committee records", "Approval workflow"],
+    mappings: ["NIST AI RMF: GOVERN", "ISO/IEC 42001: leadership, planning and governance"],
+  },
+  {
+    id: "AI-INV-001",
+    name: "AI Inventory and Use-Case Classification",
+    risk: "Unknown or misclassified AI use may bypass required controls and regulatory obligations.",
+    controls: [
+      "Maintain an inventory of internally developed and third-party AI systems.",
+      "Record purpose, owner, users, data, model, vendor, geography and lifecycle status.",
+      "Classify use cases by impact, criticality and affected stakeholders.",
+      "Reassess classification after material change.",
+    ],
+    evidence: ["AI inventory", "Use-case intake form", "Classification methodology", "Approval records", "Change history"],
+    mappings: ["NIST AI RMF: GOVERN and MAP", "ISO/IEC 42001: context, planning and AI system inventory"],
+  },
+  {
+    id: "AI-RISK-001",
+    name: "AI Risk and Impact Assessment",
+    risk: "AI risks and impacts may not be identified, measured or treated before deployment.",
+    controls: [
+      "Perform documented AI risk and impact assessments.",
+      "Assess intended and unintended impacts on individuals, groups and the organization.",
+      "Define risk treatment, acceptance and residual-risk approval.",
+      "Review assessments periodically and after significant change.",
+    ],
+    evidence: ["AI risk assessment", "Impact assessment", "Risk treatment plan", "Residual-risk approval", "Review records"],
+    mappings: ["NIST AI RMF: MAP, MEASURE and MANAGE", "ISO/IEC 42001: AI risk and impact assessment"],
+  },
+  {
+    id: "AI-DATA-001",
+    name: "Data Governance and Privacy",
+    risk: "Poor-quality, unauthorized or sensitive data may create unreliable outcomes, privacy violations or unlawful processing.",
+    controls: [
+      "Document data sources, ownership, provenance, quality and permitted use.",
+      "Apply privacy, retention, minimization and access requirements.",
+      "Assess representativeness and known data limitations.",
+      "Protect training, testing, prompt and output data.",
+    ],
+    evidence: ["Data inventory", "Data-flow diagram", "Privacy assessment", "Data-quality results", "Access and retention configuration"],
+    mappings: ["NIST AI RMF: MAP and MEASURE", "ISO/IEC 42001: data resources and responsible use"],
+  },
+  {
+    id: "AI-MODEL-001",
+    name: "Model Development, Validation and Change",
+    risk: "Insufficient testing or uncontrolled model change may produce inaccurate, unsafe or unreliable outcomes.",
+    controls: [
+      "Define development, validation and independent review requirements.",
+      "Establish acceptance criteria and test performance, robustness and limitations.",
+      "Control model, prompt, configuration and release changes.",
+      "Maintain versioning, traceability and rollback capability.",
+    ],
+    evidence: ["Model card", "Validation report", "Test results", "Change records", "Version history", "Release approval"],
+    mappings: ["NIST AI RMF: MEASURE and MANAGE", "ISO/IEC 42001: AI lifecycle and operation"],
+  },
+  {
+    id: "AI-HUMAN-001",
+    name: "Human Oversight and Transparency",
+    risk: "Users may over-rely on AI outputs or affected parties may not understand AI involvement and limitations.",
+    controls: [
+      "Define meaningful human review and override requirements.",
+      "Communicate appropriate disclosures, limitations and user responsibilities.",
+      "Design escalation for uncertain, harmful or high-impact outcomes.",
+      "Train users to interpret outputs and avoid automation bias.",
+    ],
+    evidence: ["Human oversight procedure", "User notices", "Escalation procedure", "Training records", "Override logs"],
+    mappings: ["NIST AI RMF: GOVERN, MAP and MANAGE", "ISO/IEC 42001: responsible use and human oversight"],
+  },
+  {
+    id: "AI-SEC-001",
+    name: "AI Security and Abuse Prevention",
+    risk: "AI systems may be manipulated, exfiltrate information or enable harmful and unauthorized activity.",
+    controls: [
+      "Threat-model AI-specific attack and abuse scenarios.",
+      "Control access to models, prompts, plugins, connectors and administrative functions.",
+      "Test prompt injection, data leakage, adversarial input and misuse scenarios.",
+      "Monitor anomalous behavior and enforce protective guardrails.",
+    ],
+    evidence: ["Threat model", "Security test report", "Access configuration", "Guardrail configuration", "Monitoring records"],
+    mappings: ["NIST AI RMF: MEASURE and MANAGE", "NIST Generative AI Profile", "ISO/IEC 42001: security and operational controls"],
+  },
+  {
+    id: "AI-TPRM-001",
+    name: "Third-Party AI and Supply Chain",
+    risk: "External models, data, tools or services may create opaque security, privacy, resilience and compliance dependencies.",
+    controls: [
+      "Perform AI-specific due diligence before onboarding.",
+      "Define contractual data, security, audit, incident and change obligations.",
+      "Assess model, data and infrastructure dependencies.",
+      "Monitor vendor changes, incidents, assurance and concentration risk.",
+    ],
+    evidence: ["Vendor assessment", "Contract clauses", "Assurance report", "Subprocessor inventory", "Monitoring records", "Exit plan"],
+    mappings: ["NIST AI RMF: GOVERN and MANAGE", "ISO/IEC 42001: suppliers and third-party relationships"],
+  },
+  {
+    id: "AI-GEN-001",
+    name: "Generative AI, Prompts and Connectors",
+    risk: "Generative AI may disclose sensitive information, produce unreliable content or take unintended action through connected tools.",
+    controls: [
+      "Define approved use cases, data restrictions and acceptable-use requirements.",
+      "Govern system prompts, grounding sources, plugins, agents and connectors.",
+      "Test harmful content, hallucination, prompt injection and data leakage.",
+      "Require output verification for high-impact use cases.",
+    ],
+    evidence: ["Generative AI standard", "Prompt inventory", "Connector inventory", "Red-team results", "Output-review procedure"],
+    mappings: ["NIST AI RMF Generative AI Profile", "ISO/IEC 42001: responsible development and use"],
+  },
+  {
+    id: "AI-OPS-001",
+    name: "Monitoring, Incidents and Decommissioning",
+    risk: "Performance degradation, harmful outcomes or incidents may continue without timely detection, response and safe retirement.",
+    controls: [
+      "Monitor performance, drift, harmful outcomes, complaints and control effectiveness.",
+      "Define AI incident classification, response, notification and learning.",
+      "Trigger reassessment after significant incidents or change.",
+      "Safely decommission models, data, access, integrations and retained outputs.",
+    ],
+    evidence: ["Monitoring dashboard", "Drift report", "Incident procedure", "Incident records", "Decommissioning checklist"],
+    mappings: ["NIST AI RMF: MEASURE and MANAGE", "ISO/IEC 42001: monitoring, improvement and lifecycle operation"],
+  },
+];
+
+const copilotReadinessChecks = [
+  {
+    id: "COP-DATA-001",
+    name: "Microsoft 365 Data Exposure Readiness",
+    risk: "Over-permissioned SharePoint, OneDrive or Teams content may become discoverable through Microsoft Copilot.",
+    checks: ["Review oversharing exposure", "Review guest access", "Review sensitivity-label coverage", "Review stale and ownerless content"],
+    evidence: ["Sharing reports", "Permission analysis", "Sensitivity-label report", "Content ownership report"],
+  },
+  {
+    id: "COP-GOV-001",
+    name: "Copilot Licensing and Use Governance",
+    risk: "Copilot may be enabled without approved use cases, accountable ownership or user obligations.",
+    checks: ["Review license assignment", "Review approved personas and use cases", "Review acceptable-use guidance", "Review training and communications"],
+    evidence: ["License export", "Use-case register", "Copilot standard", "Training records"],
+  },
+  {
+    id: "COP-EXT-001",
+    name: "Agents, Plugins and Connectors",
+    risk: "Agents, plugins and connectors may broaden data access or trigger unintended actions.",
+    checks: ["Inventory agents and connectors", "Review approval and ownership", "Assess permissions and data paths", "Review monitoring and revocation"],
+    evidence: ["Agent inventory", "Connector inventory", "Approval records", "Permission configuration", "Monitoring logs"],
+  },
+];
+
+export { aiGovernanceDomains, copilotReadinessChecks };

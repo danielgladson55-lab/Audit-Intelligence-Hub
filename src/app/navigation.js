@@ -7,6 +7,11 @@ const navigation = [
         path: "/",
         icon: "▦",
       },
+      {
+  label: "Executive Intelligence",
+  path: "/executive-intelligence",
+  icon: "◐",
+},
     ],
   },
 
@@ -84,6 +89,18 @@ const navigation = [
   },
 
   {
+  group: "Learning",
+
+  items: [
+    {
+      label: "CISA and CISSP Centers",
+      path: "/knowledge-centers",
+      icon: "◈",
+    },
+  ],
+},
+
+  {
     group: "Audit Packs",
     items: [
       {
@@ -96,6 +113,11 @@ const navigation = [
   path: "/enterprise-audits",
   icon: "▣",
 },
+{
+  label: "AI Governance Hub",
+  path: "/ai-governance",
+  icon: "✦",
+},
       {
         label: "Vendor Risk",
         path: "/tprm-assessment",
@@ -103,6 +125,7 @@ const navigation = [
       },
     ],
   },
+  
 ];
 
 export default navigation;

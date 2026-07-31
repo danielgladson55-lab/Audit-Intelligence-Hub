@@ -19,6 +19,9 @@ import MaturityAssessment  from "../pages/MaturityAssessment";
 import PolicyWorkpaperEngine  from "../pages/PolicyWorkpaperEngine";
 import CloudDeveloperAuditPacks  from "../pages/CloudDeveloperAuditPacks";
 import EnterpriseApplicationAuditPacks  from "../pages/EnterpriseApplicationAuditPacks";
+import AIGovernanceHub from "../pages/AIGovernanceHub";
+import CertificationKnowledgeCenter  from "../pages/CertificationKnowledgeCenter";
+import ExecutiveIntelligenceDashboard  from "../pages/ExecutiveIntelligenceDashboard";
 
 export default function AppRoutes() {
   return (
@@ -47,6 +50,19 @@ export default function AppRoutes() {
 <Route
   path="/enterprise-audits"
   element={<EnterpriseApplicationAuditPacks />}
+/>
+<Route
+  path="/ai-governance"
+  element={<AIGovernanceHub />}
+/>
+<Route
+  path="/knowledge-centers"
+  element={<CertificationKnowledgeCenter />}
+/>
+
+<Route
+  path="/executive-intelligence"
+  element={<ExecutiveIntelligenceDashboard />}
 />
         <Route path="/tprm-assessment" element={<TPRMAssessment />} />
         <Route path="/evidence-tracker" element={<EvidenceTracker />} />
