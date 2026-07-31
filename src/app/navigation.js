@@ -99,7 +99,17 @@ const navigation = [
     },
   ],
 },
+{
+  group: "Platform",
 
+  items: [
+    {
+      label: "About Version 1.0",
+      path: "/about",
+      icon: "i",
+    },
+  ],
+},
   {
     group: "Audit Packs",
     items: [

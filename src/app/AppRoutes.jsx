@@ -22,6 +22,8 @@ import EnterpriseApplicationAuditPacks  from "../pages/EnterpriseApplicationAudi
 import AIGovernanceHub from "../pages/AIGovernanceHub";
 import CertificationKnowledgeCenter  from "../pages/CertificationKnowledgeCenter";
 import ExecutiveIntelligenceDashboard  from "../pages/ExecutiveIntelligenceDashboard";
+import AboutPlatform from "../pages/AboutPlatform";
+import NotFound from "../pages/NotFound";
 
 export default function AppRoutes() {
   return (
@@ -64,6 +66,7 @@ export default function AppRoutes() {
   path="/executive-intelligence"
   element={<ExecutiveIntelligenceDashboard />}
 />
+
         <Route path="/tprm-assessment" element={<TPRMAssessment />} />
         <Route path="/evidence-tracker" element={<EvidenceTracker />} />
         <Route path="/knowledge-graph" element={<KnowledgeGraphExplorer />} />
@@ -71,8 +74,20 @@ export default function AppRoutes() {
   {/* Child routes */}
    <Route path="/maturity-assessment" element={<MaturityAssessment />} />
 </Route>
-       
+<Route element={<AppShell />}>
+  {/* Existing routes */}
+
+  <Route
+    path="/about"
+    element={<AboutPlatform />}
+  />
+  
+</Route>
       </Route>
+      <Route
+    path="*"
+    element={<NotFound />}
+  />
     </Routes>
   );
 }

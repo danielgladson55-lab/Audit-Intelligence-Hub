@@ -14,6 +14,7 @@ import "./cloud-audit-packs.css";
 import "./enterprise-audit-packs.css";
 import "./ai-governance.css";
 import "./stage19.css";
+import "./release.css";
 
 ReactDOM.createRoot(
   document.getElementById("root")

@@ -1,0 +1,54 @@
+.release-status-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+  color: #172033;
+  background: #f4f7fb;
+}
+
+.release-status-card {
+  width: min(620px, 100%);
+  padding: 32px;
+  border: 1px solid #dce4ef;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+}
+
+.release-status-code {
+  color: #2f6fed;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.release-status-card h1 {
+  margin: 8px 0 12px;
+}
+
+.demo-reset-button {
+  flex: 0 0 auto;
+  color: #8f1c13;
+  background: #fff1f0;
+  border: 1px solid #fecaca;
+}
+
+.demo-reset-button:hover {
+  color: #ffffff;
+  background: #b42318;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(47, 111, 237, 0.35);
+  outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+  .demo-reset-button {
+    display: none;
+  }
+}
