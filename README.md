@@ -42,3 +42,10 @@ The project is configured for the repository name `Audit-Intelligence-Hub`. In r
 ## Documentation
 
 See the `docs` folder for the roadmap, architecture, data model, user guide, deployment guide and security notice.
+
+## Secure Architecture
+
+docs/diagrams/secure-architecture.png
+
+See the editable architecture definition in
+docs/diagrams/secure-architecture.md.
